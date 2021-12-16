@@ -3,10 +3,10 @@
 # for examples
 
 
-PS1='%F{green}[%n]%f:%F{cyan}%//'
 
 
-
+PS1="[\\u@\\H \\W \\@]\\$ "
+'\e[x;ym $PS1 \e[m'
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100
 HISTFILESIZE=2000
