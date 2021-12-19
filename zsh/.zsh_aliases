@@ -10,10 +10,25 @@ function suppressWarn() {
   $1 $2 1>/dev/null;
 }
 
+function CdLs() {
+  echo '{$1}'
+    if [[ $1 != "" && $2 == "" ]]
+    then
+        cd $1 
+        ls -l
+    elif [[ $1 != "" && $2 != "" ]]
+    then
+         cd $1
+         ls $2
+    fi
+}
+
 # Commands
 alias mv='mv -vi'
 alias rm='rm -vi'
 alias cp='cp -vi'
+alias lscd='CdLs'
+alias zsource='source .zshrc'
 
 # Editors
 
@@ -53,3 +68,4 @@ alias ctest='ctest -VV'
 alias open='suppressErr xdg-open '
 alias sourceme='source ~/.zshrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'
+alias tower='root@192.168.0.22'
