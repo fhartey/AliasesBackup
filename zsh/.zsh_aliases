@@ -23,13 +23,22 @@ function CdLs() {
     fi
 }
 
+function unzipDir(){
+  for d in *.zip
+do
+  dir=$1/${d%%.zip}
+  mkdir $dir
+  unzip -d "$dir" "$d"
+done
+}
+
 # Commands
 alias mv='mv -vi'
 alias rm='rm -vi'
 alias cp='cp -vi'
 alias lscd='CdLs'
 alias zsource='source .zshrc'
-
+alias unzipDir='unzipDir'
 # Editors
 
 
@@ -68,4 +77,7 @@ alias ctest='ctest -VV'
 alias open='suppressErr xdg-open '
 alias sourceme='source ~/.zshrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'
-alias tower='root@192.168.0.22'
+alias tower='ssh root@192.168.0.22'
+alias format32='sudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk7'
+alias diskList='diskutil list'
+
