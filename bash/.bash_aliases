@@ -14,6 +14,9 @@ function suppressWarn() {
 alias mv='mv -vi'
 alias rm='rm -vi'
 alias cp='cp -vi'
+alias lsize='du -ah --max-depth=1 | sort -h'
+alias 64BitRanHash='openssl rand -base64 48'
+alias countDir='ls -1 | wc -l'
 
 # Editors
 alias vi='nvim'
@@ -47,18 +50,7 @@ alias ff="$HOME/Github/Dotfiles/bash/firefox_search.sh -s"
 alias ffw="$HOME/Github/Dotfiles/bash/firefox_search.sh -w"
 
 # Directories
-alias ghd='cd ~/Github;pwd'
-alias rsd='cd ~/Documents/Rust;pwd'
-alias hsd='cd ~/Documents/Haskell;pwd'
-alias jsd='cd ~/Documents/Javascript;pwd'
-alias rkd='cd ~/Documents/Racket;pwd'
-alias rkd='cd ~/Documents/Racket;pwd'
-alias cpd='cd ~/Documents/Cpp;pwd'
-alias ocd='cd ~/Documents/OCaml;pwd'
-alias smd='cd ~/Documents/SML;pwd'
-alias greend='cd ~/Github/Green;pwd'
-alias greenc='cd ~/Github/Green/Green-Compiler-Repository-GitHub;pwd'
-alias dana='cd ~/Dana;pwd'
+
 
 # Make & CMake Commands
 alias maket='make test -C'
@@ -66,7 +58,6 @@ alias cmakeb='cmake --build'
 alias ctest='ctest -VV'
 
 # Games
-alias runelite='java -jar /usr/local/bin/RuneLite.jar'
 
 
 # Other

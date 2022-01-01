@@ -39,6 +39,8 @@ alias cp='cp -vi'
 alias lscd='CdLs'
 alias zsource='source .zshrc'
 alias unzipDir='unzipDir'
+alias 64BitRanHash='openssl rand -base64 48'
+alias countDir='ls -1 | wc -l'
 # Editors
 
 

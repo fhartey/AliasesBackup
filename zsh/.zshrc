@@ -46,7 +46,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PROMPT='%F{green}[%n]%f:%F{cyan}%//'
+  PROMPT='%F{magenta}[%n]%f:%F{cyan}%//: %F{white}%'
 else
   PS1='[\T]Jschappel$'
 fi
