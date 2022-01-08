@@ -22,10 +22,9 @@ CYAN='\[\033[1;36m\]'
 NC='\[\033[0m\]'
 
 
-#PS1="[\\u@\\H \\W \\@]\\$ "
-#'\e[x;ym $PS1 \e[m'
-PS1="$PURPLE[\u@\h]$cyan\w:$white "
-#PS1='\w\$ '
+PS1="$PURPLE[\u@\h]$cyan\w:$white"
+#PS1="$PURPLE\u@\h$cyan\w:$white"
+
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100

@@ -10,6 +10,21 @@ function suppressWarn() {
   $1 $2 1>/dev/null;
 }
 
+#bios dumping 
+#https://www.youtube.com/watch?v=mM7ntkiUoPk&t=6s
+function UnbindGPU(){
+  #example run lspci -v then add the number of gpu
+   #echo "0000:09:00.0" > /sys/bus/pci/drivers/vfio-pci/unbind 
+   echo $1 > /sys/bus/pci/drivers/vfio-pci/unbind 
+}
+
+function MoveFileToDir(){
+
+ # $1 should be the Regex
+ # $2 is the Dir to move it to
+ find . -name $1 -exec mv {}  $2/ \;
+}
+
 # Commands
 alias mv='mv -vi'
 alias rm='rm -vi'
@@ -17,6 +32,13 @@ alias cp='cp -vi'
 alias lsize='du -ah --max-depth=1 | sort -h'
 alias 64BitRanHash='openssl rand -base64 48'
 alias countDir='ls -1 | wc -l'
+alias listConnectedDevices='lspci -v'
+alias unbindGPU='UnbindGPU'
+alias connectedDevices='lspci -v'
+alias MoveFiles='MoveFileToDir'
+
+#DIR's
+stor='cd /mnt/user' 
 
 
 # Python

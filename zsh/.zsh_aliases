@@ -32,6 +32,15 @@ do
 done
 }
 
+
+function MoveFileToDir(){
+
+ # $1 should be the Regex
+ # $2 is the Dir to move it to
+ find . -name $1 -exec mv {}  $2/ \;
+}
+
+
 # Commands
 alias mv='mv -vi'
 alias rm='rm -vi'
@@ -41,6 +50,9 @@ alias zsource='source .zshrc'
 alias unzipDir='unzipDir'
 alias 64BitRanHash='openssl rand -base64 48'
 alias countDir='ls -1 | wc -l'
+alias connectedDevices='lspci -v'
+#alias MoveFiles='MoveFileToDir'
+#alias rename E=1; for f in *.avi; do ls -lvr | mv "$f" "S01E$((E++))_$f"; done
 # Editors
 
 
@@ -55,15 +67,9 @@ alias g++c='g++ -Wall -std=c++17'
 alias python='python3'
 
 #Terminals
-alias gterm='gnome-terminal'
-alias gtab='gnome-terminal --tab'
-alias ntw='gnome-terminal'
-alias term='xterm -fa Monospace -fs 12 &'
 
 # Internet Browser
-alias weather='curl wttr.in'
-alias ff="$HOME/Github/Dotfiles/bash/firefox_search.sh -s"
-alias ffw="$HOME/Github/Dotfiles/bash/firefox_search.sh -w"
+
 
 # Directories
 
@@ -80,6 +86,8 @@ alias open='suppressErr xdg-open '
 alias sourceme='source ~/.zshrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'
 alias tower='ssh root@192.168.0.22'
-alias format32='sudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk7'
+
+# this needs to be a script
+#alias format32='sudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk7'
 alias diskList='diskutil list'
 
