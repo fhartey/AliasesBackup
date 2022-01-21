@@ -61,6 +61,5 @@ alias ctest='ctest -VV'
 
 # Other
 alias open='suppressErr xdg-open '
-alias myaddress='echo "8460 Limekiln Pk 19095 PA"'
 alias sourceme='source ~/.bashrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'
