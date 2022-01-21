@@ -39,6 +39,7 @@ alias MoveFiles='MoveFileToDir'
 #Docker commands
 alias df="docker system df"
 alias prune="docker system prune"
+alias "docker rmi" # use the image ID
 
 #DIR's
 alias home='cd /mnt/user' 
