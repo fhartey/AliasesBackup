@@ -36,6 +36,8 @@ alias listConnectedDevices='lspci -v'
 alias unbindGPU='UnbindGPU'
 alias connectedDevices='lspci -v'
 alias MoveFiles='MoveFileToDir'
+#Docker commands
+alais df="docker system df"
 
 #DIR's
 stor='cd /mnt/user' 
