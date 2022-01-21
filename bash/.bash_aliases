@@ -26,9 +26,6 @@ function MoveFileToDir(){
 }
 
 # Commands
-alias mv='mv -vi'
-alias rm='rm -vi'
-alias cp='cp -vi'
 alias lsize='du -ah --max-depth=1 | sort -h'
 alias 64BitRanHash='openssl rand -base64 48'
 alias countDir='ls -1 | wc -l'
@@ -36,15 +33,19 @@ alias listConnectedDevices='lspci -v'
 alias unbindGPU='UnbindGPU'
 alias connectedDevices='lspci -v'
 alias MoveFiles='MoveFileToDir'
+
 #Docker commands
 alias df="docker system df"
 alias prune="docker system prune"
 alias rmi="docker rmi" # use the image ID
 
+# short cuts
+alias b='cd ..'
+alias cc='cd \!*; ls -l'
 #DIR's
 alias home='cd /mnt/user' 
-
-
+alias downloads='cd /mnt/user/downloads' 
+alias appdata='cd /mnt/user/appdata' 
 # Python
 alias python='python3'
 
