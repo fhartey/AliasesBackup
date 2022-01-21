@@ -38,6 +38,7 @@ alias connectedDevices='lspci -v'
 alias MoveFiles='MoveFileToDir'
 #Docker commands
 alias df="docker system df"
+alias prune="docker system prune"
 
 #DIR's
 alias home='cd /mnt/user' 
