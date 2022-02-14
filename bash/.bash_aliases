@@ -38,10 +38,15 @@ alias MoveFiles='MoveFileToDir'
 alias df="docker system df"
 alias prune="docker system prune"
 alias rmi="docker rmi" # use the image ID
+alias dps="docker ps"
+# get into a consoles container by terminal use docker ps to show names
+alias dconsole="docker exec -it" # arg to follow <container name> /bin/bash
+alias autheliaPass='docker run --rm authelia/authelia:latest authelia hash-password'
 
 # short cuts
 alias b='cd ..'
 alias cc='cd \!*; ls -l'
+alias ..="cd .."
 #DIR's
 alias home='cd /mnt/user' 
 alias downloads='cd /mnt/user/downloads' 
@@ -64,3 +69,15 @@ alias ctest='ctest -VV'
 alias open='suppressErr xdg-open '
 alias sourceme='source ~/.bashrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'
+
+#MYSQL
+mysql='mysql -u root -p'
+sqlSD='show databases;'
+sqlST='show tables;'
+sqlShowUsers='SELECT User FROM mysql.user;'
+sqlShowAllUsers='SELECT User, Password, Host FROM mysql.user;'
+#sqlDropUser='DROP USER 'jeffrey'@'localhost';'
+
+#HomeAsstaint
+#agurments at the end need two Username and password
+AHChangePassword='hass --script auth --config /config change_password existing_use'

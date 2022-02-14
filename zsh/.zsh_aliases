@@ -46,6 +46,7 @@ alias mv='mv -vi'
 alias rm='rm -vi'
 alias cp='cp -vi'
 alias lscd='CdLs'
+alias ..="cd .."
 alias zsource='source .zshrc'
 alias unzipDir='unzipDir'
 alias 64BitRanHash='openssl rand -base64 48'
