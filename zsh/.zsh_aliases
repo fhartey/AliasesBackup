@@ -92,3 +92,6 @@ alias tower='ssh root@192.168.0.22'
 #alias format32='sudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk7'
 alias diskList='diskutil list'
 
+#python commands
+
+alias pip3='python3.9 -m pip install'
