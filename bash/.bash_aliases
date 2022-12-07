@@ -38,10 +38,13 @@ alias MoveFiles='MoveFileToDir'
 alias df="docker system df"
 alias prune="docker system prune"
 alias rmi="docker rmi" # use the image ID
-alias dps="docker ps"
+alias dps="docker ps" # show images
 # get into a consoles container by terminal use docker ps to show names
 alias dconsole="docker exec -it" # arg to follow <container name> /bin/bash
 alias autheliaPass='docker run --rm authelia/authelia:latest authelia hash-password'
+# this creates a docker network to use in the host area for the containers
+alias CreateDockerNetwork =  'docker network create' # fallow by hostname EX: myhostname
+alias CreateDockerBridgeNetwork = 'docker network create -d bridge' # my-bridge-network
 
 # short cuts
 alias b='cd ..'
